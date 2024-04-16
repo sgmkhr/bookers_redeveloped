@@ -1,0 +1,39 @@
+<div class="index-content content-wrap">
+  <div class="index-books">
+    <h1>Books</h1>
+    <table>
+      <thead>
+        <tr><th>Title</th><th colspan=2>Body</th><th></th></tr>
+      </thead>
+      <tbody>
+        <% @books.each do |book| %>
+        <tr>
+          <td>
+            <%= book.title %>
+          </td>
+          <td colspan=2>
+            <%= book.body %>
+          </td>
+          <td>
+            <%= link_to 'Show', book_path(book.id), class: "link-item" %>
+            <%= link_to 'Edit', edit_book_path(book.id), class: "link-item" %>
+            <%= link_to 'Destroy', book_path(book.id), method: :delete, "data-confirm" => "Are you sure?", class: "link-item" %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  
+  <div class="new-book">
+  <h2>New book</h2>
+    <%= render 'layouts/errors', obj: @book %>
+    <%= form_with model: @book do |f| %>
+      <p>Title</p>
+      <%= f.text_field :title, class: "form-box" %>
+      <p>Body</p>
+      <%= f.text_area :body, class: "form-box" %>
+      <%= f.submit 'Create Book', class: "submit-button" %>
+    <% end %>
+  </div>
+</div>

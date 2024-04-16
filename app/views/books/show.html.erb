@@ -1,0 +1,13 @@
+<div class="show-content content-wrap">
+  <div>
+    <span><strong>Title: </strong></span><%= @book.title %>
+  </div>
+  <div>
+    <span><strong>Body: </strong></span><%= @book.body %>
+  </div>
+</div>
+<div class="link-button">
+  <%= link_to 'Edit', edit_book_path(@book.id) %>
+  <span> | </span>
+  <%= link_to 'Back', books_path %>
+</div>
