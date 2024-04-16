@@ -1,12 +1,12 @@
 <% if obj.errors.any? %>
   <div class="error-box">
-    <div class="error-count">
+    <p class="error-count">
       <%= obj.errors.count %>error prohibited this book from being saved:
-    </div>
+    </p>
     <ul>
-      <% obj.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+    <% obj.errors.full_messages.each do |message| %>
+      <li>▪ <%= message %></li>
+    <% end %>
     </ul>
   </div>
 <% end %>

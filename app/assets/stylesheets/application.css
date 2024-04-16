@@ -83,3 +83,28 @@ table {
   padding: 10px;
   font-size: 14px;
 }
+
+.error-box {
+  width: 500px;
+  border: solid 2px red;
+  background-color: whitesmoke;
+}
+
+.error-count {
+  background-color: #cc0000;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+
+.flash-message {
+  line-height: 4;
+  color: mediumseagreen;
+}
+
+.error-box li {
+  list-style: none;
+}
+
+.error-box ul {
+  margin: 50px;
+}
